@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "compile": "tsc",
-    "start": "npm run compile && nodemon --watch ./schema/schema.graphql ./dist/index.js"
+    "start": "npm run compile && nodemon --watch ./schema/schema.graphql --watch ./schema/mocks.js ./dist/index.js"
   },
   "keywords": [],
   "author": "",

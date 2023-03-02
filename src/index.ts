@@ -3,6 +3,7 @@ import { startStandaloneServer } from '@apollo/server/standalone'
 import { addMocksToSchema } from '@graphql-tools/mock';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import * as fs from 'node:fs/promises'
+import { mocks } from '../schema/mocks.js'
 
 const filehandle = await fs.open('./schema/schema.graphql', 'r+')
 const typeDefs = await filehandle.readFile('utf8')
@@ -11,6 +12,7 @@ filehandle.close()
 const server = new ApolloServer({
     schema: addMocksToSchema({
         schema: makeExecutableSchema({ typeDefs }),
+        mocks
     }),
 });
 
