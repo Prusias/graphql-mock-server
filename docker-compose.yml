@@ -8,3 +8,5 @@ services:
         published: 4000
         protocol: tcp
         mode: host
+    volumes:
+      - ./schema:/schema
