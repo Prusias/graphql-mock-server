@@ -1,0 +1,18 @@
+type Book {
+    id: ID
+    title: String
+    author: String
+    page: Page
+}
+
+type Page {
+    id: ID
+    page_number: Int
+    contents: String
+}
+
+type Query {
+    books: [Book]
+    book(id: ID!): Book!
+    page(id: ID!): Page!
+}

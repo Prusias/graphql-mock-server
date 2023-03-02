@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  apollo-graphql-mock-server:
+    build: ./
+    ports:
+      - target: 4000
+        host_ip: 127.0.0.1
+        published: 4000
+        protocol: tcp
+        mode: host
