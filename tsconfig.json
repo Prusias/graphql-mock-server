@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-      "rootDirs": ["src"],
+      "rootDir": "src",
       "outDir": "dist",
-      "lib": ["es2020"],
-      "target": "es2020",
-      "module": "esnext",
-      "moduleResolution": "node",
+      "lib": ["es2022", "dom", "dom.iterable", "esnext.disposable"],
+      "target": "es2022",
+      "module": "nodenext",
+      "moduleResolution": "nodenext",
       "esModuleInterop": true,
       "types": ["node"]
     }

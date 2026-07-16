@@ -1,0 +1,5 @@
+type Query {
+    viewer: User!
+    user(id: ID!): User
+    products: [Product!]!
+}

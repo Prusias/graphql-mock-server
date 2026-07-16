@@ -1,7 +1,9 @@
-version: '3.0'
 services:
-  apollo-graphql-mock-server:
+  graphql-mock-server:
     build: ./
+    environment:
+      MOCK_SCENARIO: default
+      MOCK_SEED: 12345
     ports:
       - target: 4000
         host_ip: 127.0.0.1
@@ -9,4 +11,4 @@ services:
         protocol: tcp
         mode: host
     volumes:
-      - ./schema:/schema
+      - ./src:/app/src
